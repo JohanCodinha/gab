@@ -1,0 +1,22 @@
+CREATE DATABASE gab;
+
+CREATE TABLE new_arrivals (
+	id SERIAL4 PRIMARY KEY,
+	name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE users (
+	id SERIAL4 PRIMARY KEY,
+	name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE questions (
+	id SERIAL4 PRIMARY KEY,
+	body VARCHAR(600) NOT NULL,
+	answer VARCHAR(600),
+	new_arrival_id INTEGER,
+	user_id INTEGER
+);
+
+ALTER TABLE new_arrivals
+ADD location VARCHAR(50);
